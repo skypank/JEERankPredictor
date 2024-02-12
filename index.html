@@ -16,7 +16,7 @@
         }
 
         .container {
-            max-width: 500px;
+            max-width: 800px;
             width: 100%;
             padding: 20px;
             border: 1px solid #ccc;
@@ -83,7 +83,7 @@
 
     <div class="container">
         <h2>Expected Cut Off Ranks</h2>
-        <button id="toggleTable" onclick="toggleTable()">Show/Hide Table</button>
+        <button id="toggleTable" onclick="toggleTable()">Show/Hide Cut off</button>
         <table id="cutOffTable">
             <thead>
                 <tr>
@@ -159,6 +159,17 @@
 
             var rank = Math.ceil((100 - percentile) / 100 * totalApplicants);
             document.getElementById("result").innerText = "Your Predicted rank is: " + rank;
+        }
+
+        function toggleTable() {
+            var table = document.getElementById("cutOffTable");
+            if (table.style.display === "none") {
+                table.style.display = "table";
+                document.getElementById("toggleTable").innerText = "Hide Cut-off";
+            } else {
+                table.style.display = "none";
+                document.getElementById("toggleTable").innerText = "Show Cot-off";
+            }
         }
     </script>
 </body>
