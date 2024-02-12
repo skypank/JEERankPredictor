@@ -82,7 +82,6 @@
     </div>
 
     <div class="container">
-        <h2>Expected Cut Off Ranks</h2>
         <div>
             <button id="toggleTable" onclick="toggleTable()">Show/Hide Cut off</button>
         </div>
@@ -167,10 +166,10 @@
             var table = document.getElementById("cutOffTable");
             if (table.style.display === "none") {
                 table.style.display = "table";
-                document.getElementById("toggleTable").innerText = "Hide Cut-off";
+                document.getElementById("toggleTable").innerText = "Hide";
             } else {
                 table.style.display = "none";
-                document.getElementById("toggleTable").innerText = "Show Cot-off";
+                document.getElementById("toggleTable").innerText = "Show";
             }
         }
     </script>
